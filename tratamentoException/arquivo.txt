@@ -1,0 +1,35 @@
+Tratamento de Exceções
+
+O tratamento de exceções é extremamente importante para garantir que a aplicação ou 
+programa continue funcionando ao encontrar algo inesperado em relação ao seu funcionamento normal.
+
+ try:
+      # código suscetível a falha
+except:
+# código executado após ocorrer um erro
+else:
+      # código executado apenas se nenhum erro ocorrer
+finally:
+      # código executado sempre
+
+Ele captura o erro, impedindo que ele continue subindo na pilha de execução, 
+e permite desvios no fluxo para que sejam tomadas as medidas necessárias em cada caso
+---------------------------------------------------------------------------------------------------------
+
+Tratamento de Exceções
+
+Trecho de código seguro: try (qualquer erro que ocorrer ali será capturado e o fluxo 
+redirecionado para os blocos except)
+Demais blocos: um erro irá seguir o fluxo padrão de erros e será elevado na pilha de execução.
+
+   from paciente import Paciente, NameIsEmptyError
+try:
+   nome = input('Digite o nome do paciente: ')
+   p = Paciente(nome)
+except TypeError:
+print('O nome deve ser uma string')
+except NameIsEmptyError:
+   print('O nome não pode ser uma string vazia')
+except Exception as e:
+   print('Ocorreu um erro inesperado ao criar o objeto')
+   print('informações do erro:', e)
