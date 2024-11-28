@@ -1,0 +1,8 @@
+Herança:
+
+Herança é o que que permite uma classe (chamada de classe filha ou subclasse) herdar atributos 
+e métodos de outra classe (chamada de classe pai ou superclasse). 
+Isso promove o reaproveitamento de código e permite especializar 
+ou estender o comportamento da classe mãe. 
+Exemplo: Uma classe Animal pode ser herdada por classes como Cachorro ou Gato, 
+que adicionam características específicas.

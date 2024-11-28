@@ -1,0 +1,27 @@
+### 1. **Dependência**  
+Uma classe depende de outra quando usa algum de seus métodos ou atributos temporariamente, 
+sem armazenar essa outra classe como parte de sua estrutura. 
+Exemplo: Um método que recebe um objeto de outra classe como parâmetro.
+ A relação é curta e não afeta a existência das classes.
+
+--------------------------------------------------------------------------------------------
+
+### 2. **Associação Simples**  
+É um relacionamento mais permanente, onde uma classe conhece e armazena uma referência de outra. 
+Exemplo: Um professor associado a várias disciplinas. Ambas podem existir independentemente; 
+uma classe não depende da outra para ser criada.
+
+--------------------------------------------------------------------------------------------
+
+### 3. **Agregação**  
+É um tipo de associação onde uma classe contém outra como parte de sua estrutura, 
+mas a existência da classe contida é independente. Exemplo: Uma sala de aula contém alunos, 
+mas os alunos podem existir sem a sala.
+
+--------------------------------------------------------------------------------------------
+
+### 4. **Composição**  
+É uma relação forte onde uma classe controla completamente outra, 
+e a existência da classe contida depende da classe que a contém. 
+Exemplo: Um carro e seu motor; o motor não existe fora do carro, 
+pois é criado e destruído junto com ele.
