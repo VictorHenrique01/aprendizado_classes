@@ -16,30 +16,39 @@ class Usuario:
         self.nome = nome
         self.senha = senha
 
-    def autenticar(self, nome, senha):
+    def autenticar(self):
         try:
-            resultado = self.nome = "admin" and self.senha = "1234"
-            return resultado
-        
+            if self.nome == "admin" and self.senha == "1234":
+                return True
+            else:
+                return False
+
         except ValueError:
             print("Dados incorretos")
 
         except Exception as e:
             print(f"Erro inesperado {e}")
 
-print("Login do Usuário:")
-while True:
+print("----------> Login do Usuário <----------")
+tentativas = 3
+while tentativas > 0:
     try:
 
         nome = input("Nome do usuário: ")
         senha = input("Senha do usuário: ")
         
         user = Usuario(nome, senha)
-        resultado = user.autenticar(nome, senha)
-        if resultado == resultado:
-            print("Login realizado")
+        if user.autenticar():
+            print("Login realizado com sucesso!")
             break
         else:
-            for tentativa
+            tentativas -= 1
+            print(f"Dados incorretos. Você tem {tentativas} tentativa(s) restante(s)")
 
+        if tentativas == 0:
+            print("Acesso bloqueado!")
+            break
+
+    except Exception as e:
+        print(f"Ocorreu um erro inesperado {e}")
             
