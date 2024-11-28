@@ -23,9 +23,6 @@ class Usuario:
             else:
                 return False
 
-        except ValueError:
-            print("Dados incorretos")
-
         except Exception as e:
             print(f"Erro inesperado {e}")
 
